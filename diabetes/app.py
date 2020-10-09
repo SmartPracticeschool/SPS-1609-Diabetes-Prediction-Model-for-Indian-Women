@@ -41,9 +41,9 @@ def index():
             'https://g364vkf5me.execute-api.us-east-1.amazonaws.com/final',
             data=j)
         if r.text == '1':
-            res = "Yes"
+            res = "Yes,the person is diabetic"
         else:
-            res = "No"
+            res = "No,the person is not diabetic"
         print(r.text)
         return render_template("result.html",res=res)
         
